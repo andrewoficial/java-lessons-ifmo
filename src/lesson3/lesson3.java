@@ -46,5 +46,14 @@ public class lesson3 {
         for(int i=35; i >= 0; i -= 5){
             System.out.println(i);
         }
+/*
+        name1;
+        while(true){
+            name2
+                    while(true){
+                        break; name1
+                    }
+        }
+ */
     }
 }
