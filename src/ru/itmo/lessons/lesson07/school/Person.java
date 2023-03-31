@@ -1,6 +1,9 @@
 package ru.itmo.lessons.lesson07.school;
 
-public class Person {
+//abstract - нельзя создать экземпляры
+// может содержать абстрактные методы (без реализации)
+// которые необходимо реализовать в дочерних классах
+abstract public class Person {
     protected String name;
     protected int age;
 
@@ -28,5 +31,6 @@ public class Person {
         return age;
     }
 
-
+    //Без реализации
+    abstract public void rest();
 }

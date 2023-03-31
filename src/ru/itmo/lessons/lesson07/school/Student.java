@@ -1,11 +1,12 @@
 package ru.itmo.lessons.lesson07.school;
 
-public class Student extends Person{
+public class Student extends Person implements ILearn{
     private String subject; //изучаемый предмет
     private int level;
 
-    public Student(String name){
+    public Student(String name, String subj){
         super(name);
+        this.subject = subj;
     }
 
     public String getSubject() {
@@ -23,5 +24,24 @@ public class Student extends Person{
         return level;
     }
 
+    @Override
+    public void setAge(int studentAge){
+        if(studentAge < 7){
+            throw new IllegalArgumentException("age < 7");
+        }
+        this.age = studentAge;
+    }
+
+    @Override
+    public void rest(){
+        System.out.println("Студент отдыхает");
+    }
+
+    @Override
+    public void learn (int level){
+        System.out.println("Студент  " + name + " изучает " + subject
+                + " и ему кажется что уровень преподавателя " + level);
+        this.level = (int) (Math.random() * level);
+    }
 
 }
