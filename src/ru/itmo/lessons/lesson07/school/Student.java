@@ -40,8 +40,9 @@ public class Student extends Person implements ILearn{
     @Override
     public void learn (int level){
         System.out.println("Студент  " + name + " изучает " + subject
-                + " и ему кажется что уровень преподавателя " + level);
+                + " и ему кажется что уровень преподавателя " + level + " при этом его уровень: " + this.level);
         this.level = (int) (Math.random() * level);
+        System.out.println("Что-то произошло и уровень преподавателя теперь: " + level + " а уровень ученика " + this.level);
     }
 
 }

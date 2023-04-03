@@ -4,7 +4,11 @@ import ru.itmo.lessons.lesson07.school.Student;
 import ru.itmo.lessons.lesson07.school.Teacher;
 import ru.itmo.lessons.lesson07.school.Headmaster;
 public class Lesson07 {
+
+    //Static со свойствами с методами с классами (только со вложенных) static блоки
+    //static метод если он фабричный (создает объекты) или если метод вспомогательный
     public static void main(String[] args) {
+        Mouse miccy = Mouse.getMouse();
         Cat cat01 = new Cat(16, 1);
         cat01.setName("Grischa");
         Student student01 = new Student ("Марк", "Химия");
@@ -38,6 +42,8 @@ public class Lesson07 {
         headmaster.invite(teacher02);
 
         System.out.println();
+        System.out.println();
+        teacher01.teach(student01);
         System.out.println();
         teacher01.teach(student01);
         System.out.println();
