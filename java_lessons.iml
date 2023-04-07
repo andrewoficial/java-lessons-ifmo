@@ -10,6 +10,8 @@
       <excludeFolder url="file://$MODULE_DIR$/src/lesson04" />
       <excludeFolder url="file://$MODULE_DIR$/src/lesson05" />
       <excludeFolder url="file://$MODULE_DIR$/src/ru/itmo/lessons/lesson06" />
+      <excludeFolder url="file://$MODULE_DIR$/src/ru/itmo/lessons/lesson10" />
+      <excludeFolder url="file://$MODULE_DIR$/src/ru/itmo/lessons/lesson07" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
