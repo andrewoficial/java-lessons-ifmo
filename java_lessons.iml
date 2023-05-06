@@ -19,6 +19,12 @@
       <excludeFolder url="file://$MODULE_DIR$/src/ru/itmo/lessons/lesson13" />
       <excludeFolder url="file://$MODULE_DIR$/src/ru/itmo/lessons/lesson17" />
       <excludeFolder url="file://$MODULE_DIR$/src/ru/itmo/lessons/lesson18" />
+      <excludeFolder url="file://$MODULE_DIR$/src/ru/itmo/lessons/lesson20/task01" />
+      <excludeFolder url="file://$MODULE_DIR$/src/ru/itmo/lessons/lesson19" />
+      <excludeFolder url="file://$MODULE_DIR$/src/ru/itmo/lessons/lesson20" />
+      <excludeFolder url="file://$MODULE_DIR$/src/ru/itmo/lessons/lesson21" />
+      <excludeFolder url="file://$MODULE_DIR$/src/ru/itmo/lessons/lesson14" />
+      <excludeFolder url="file://$MODULE_DIR$/src/ru/itmo/lessons/lesson22" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

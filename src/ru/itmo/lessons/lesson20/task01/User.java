@@ -1,5 +1,4 @@
 package ru.itmo.lessons.lesson20.task01;
-
 import java.util.HashMap;
 
 public class User {
