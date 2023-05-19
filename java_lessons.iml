@@ -25,6 +25,8 @@
       <excludeFolder url="file://$MODULE_DIR$/src/ru/itmo/lessons/lesson21" />
       <excludeFolder url="file://$MODULE_DIR$/src/ru/itmo/lessons/lesson14" />
       <excludeFolder url="file://$MODULE_DIR$/src/ru/itmo/lessons/lesson22" />
+      <excludeFolder url="file://$MODULE_DIR$/src/ru/itmo/lessons/lesson23" />
+      <excludeFolder url="file://$MODULE_DIR$/src/ru/itmo/lessons/lesson24" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
