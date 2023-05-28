@@ -25,7 +25,7 @@ public class ServerApp {
 
             // ObjectInputStream objectInput = new ObjectInputStream(input); //Десерриализация
 
-            // ObjectOutputStream objectOutput = new ObjectOutputStream(); //Серриализация
+            // ObjectOutputStream objectOutput = new ObjectOutputStream(); //Серриализация.
 
             System.out.println(input.read());
             output.write(2);
