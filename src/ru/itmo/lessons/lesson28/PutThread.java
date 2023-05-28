@@ -11,6 +11,8 @@ public class PutThread extends Thread /* implements Runnable */{
 
     @Override
     public void run() {
-        account.putMoney(sum);
+        synchronized (account) { //Проверяет что объект account (его монитор) свободен
+            account.putMoney(sum);
+        }
     }
 }
