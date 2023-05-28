@@ -32,7 +32,7 @@ public class ClientApp {
                 readWrite.writeMessage(message);
                 Message fromServer = readWrite.readMessage();
 
-                System.out.println(fromServer.);
+                System.out.println(fromServer.getText());
             } catch(UnknownHostException e){
                 System.out.println("Ошибка адреса или порта");
             }
@@ -43,7 +43,7 @@ public class ClientApp {
         }
     }
     public static void main(String[] args) {
-        String ip = "127.0.0.1";
+        String ip = "127.0.0.1"; //Локальный адрес
         int port = 2222;
         InetSocketAddress remote = new InetSocketAddress(ip, port);
         InetSocketAddress local = new InetSocketAddress(ip, 1111);
