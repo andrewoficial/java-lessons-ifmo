@@ -1,6 +1,5 @@
 package ru.itmo.lessons.lesson27.task;
 
-	import ru.itmo.lessons.lesson25.common.Message;
 	import ru.itmo.lessons.lesson25.common.ReadWrite;
 	
 	import java.io.IOException;

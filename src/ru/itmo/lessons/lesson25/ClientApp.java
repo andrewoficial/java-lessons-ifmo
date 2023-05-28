@@ -22,23 +22,24 @@ public class ClientApp {
     public void run (){
         Scanner scanner = new Scanner(System.in);
         while(true){
-            System.out.println("Введите текст или '/exit' для выхода");
+
+            logMsgC("Введите текст или '/exit' для выхода");
             String input = scanner.nextLine();
             if("/exit".equalsIgnoreCase(input)) return; //Если после цикла while нет ничего полезного то сразу прервать метод run
+
             try(Socket socket = new Socket (remote.getHostString(), remote.getPort());
-                ReadWrite readWrite = new ReadWrite(socket);){
+                ReadWrite readWrite = new ReadWrite(socket);
+                ){
 
                 Message message = new Message(input);
                 readWrite.writeMessage(message);
                 Message fromServer = readWrite.readMessage();
-
-                System.out.println(fromServer.getText());
+                logMsgC(" readWrite.readMessage" + fromServer.getText());
             } catch(UnknownHostException e){
-                System.out.println("Ошибка адреса или порта");
+                logMsgC(" Ошибка адреса или порта");
             }
             catch (IOException e){
-                System.out.println("Сервер не отвечает");
-
+                logMsgC(" Сервер не отвечает");
             }
         }
     }
@@ -54,35 +55,47 @@ public class ClientApp {
         InputStream input = null;
         try {
             socket.bind(local);
-            System.out.println(socket.isBound());
+            logMsgC(" socket.isBound? " + socket.isBound());
 
             socket.connect(remote /*, 10000 */); // соединение с удаленным сервером
-            System.out.println(socket.isConnected());
+            //socket.connect(local /*, 10000 */); // соединение с удаленным сервером
+            logMsgC(" socket.isConnected? " + socket.isConnected());
 
-            System.out.println(socket.getReceiveBufferSize());
-            System.out.println(socket.getSendBufferSize());
-            System.out.println(socket.getLocalSocketAddress());
-            System.out.println(socket.getRemoteSocketAddress());
+            logMsgC(" ReceiveBufferSize? " + socket.getReceiveBufferSize());
+            logMsgC(" SendBufferSize? " + socket.getSendBufferSize());
+            logMsgC(" LocalSocketAddress? " + socket.getLocalSocketAddress());
+            logMsgC(" RemoteSocketAddress? " + socket.getRemoteSocketAddress());
 
             output = socket.getOutputStream();
             input = socket.getInputStream();
-
+            logMsgC(" Записываю " + 11);
             output.write(11);
-            System.out.println(input.read());
+            logMsgC(" Считываю " + input.read());
         } catch (SocketException e) {
+            logMsgC("Произошло исключение SocketException");
             e.printStackTrace();
         } catch (IOException e) {
+            logMsgC("Произошло исключение IOException");
             e.printStackTrace();
         }
         finally {
+            logMsgC("Закрываю ресурсы");
             try {
                 if (input != null) input.close();
+                logMsgC("   Закрываю input");
                 if (output != null) output.close();
-                socket.close();
+                logMsgC("   Закрываю output");
+                if (socket != null) socket.close();
+                logMsgC("   Закрываю serverSocket");
             } catch (IOException e){
+                logMsgC("   Произошло исключение при закрытии ресурсов");
                 e.printStackTrace();
             }
         }
 
+    }
+
+    private static void logMsgC(String msg){
+        System.out.println("CLT:" + msg);
     }
 }
